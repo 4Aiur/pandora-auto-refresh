@@ -21,6 +21,7 @@ curl -X POST \
   }' \
   http://127.0.0.1:3000/api/conversation/talk
 ```
+集成进Python推荐使用[pandora-with-langchain_pandora-api-usage ](https://github.com/14790897/pandora-with-langchain_pandora-api-usage/blob/main/README.cn.md)
 
 ## 启动
 
