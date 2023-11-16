@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  pandora-auto-refresh:
+    image: pandora-auto-refresh
+    container_name: pandora
+    restart: unless-stopped
+    # fix lsof frozen problem
+    # https://unix.stackexchange.com/questions/722948/lsof-is-frozen-inside-the-container
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 26677
+        hard: 46677
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      # from .env file
+      args:
+        TZ: ${TZ}
+        USERNAME: ${USERNAME}
+        PASSWORD: ${PASSWORD}
+    env_file:
+      - .env
+    ports:
+      - '3000:3000'
