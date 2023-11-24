@@ -1,3 +1,6 @@
+## 废弃
+**已无法使用**, 切换至[PandoraNext](https://github.com/pandora-next/deploy)
+
 ## 简介
 基于Pandora的,可自动刷新AccessToken的ChatGPT反向代理.
 用于穿过中国GFW,美国Cloudflare,直连ChatGPT.提供HTTP访问和API访问
